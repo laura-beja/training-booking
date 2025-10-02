@@ -10,3 +10,9 @@ A web application that allows users to register for training sessions, manage th
   - Card Details for Payment
 - **Report Generation**: Generate reports of all training sessions filtered by date.
 - **Real-Time Reporting** powered by Express.js and Mongoose.
+
+- ## Technologies Used
+- **Backend**: Node.js, Express.js
+- **Database**: MongoDB with Mongoose ODM
+- **Frontend**: JavaScript, HTML, CSS (Basic UI, can be improved)
+- **Architecture**: RESTful API structure
