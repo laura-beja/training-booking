@@ -1,0 +1,25 @@
+<%- include('../partials/header') %>
+
+<h1 class="mb-4">Available Training Sessions</h1>
+
+<% if (sessions && sessions.length > 0) { %>
+  <div class="row">
+    <% sessions.forEach(function(session) { %>
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title"><%= session.name %></h5>
+            <p class="card-text">Date: <%= new Date(session.date).toLocaleDateString() %></p>
+            <p class="card-text">Time: <%= session.time %></p>
+            <p class="card-text">Available Slots: <%= session.availableSlots %></p>
+            <a href="/bookings/create/<%= session._id %>" class="btn btn-primary">Book Now</a>
+          </div>
+        </div>
+      </div>
+    <% }); %>
+  </div>
+<% } else { %>
+  <p>No training sessions available at the moment.</p>
+<% } %>
+
+<%- include('../partials/footer') %>

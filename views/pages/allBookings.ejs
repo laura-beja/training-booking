@@ -1,0 +1,15 @@
+<%- include('../partials/header') %>
+
+<h1>All Bookings</h1>
+
+<% if (bookings && bookings.length > 0) { %>
+  <ul>
+    <% bookings.forEach(function(booking) { %>
+      <li><%= booking.name %> - <%= new Date(booking.date).toLocaleDateString() %></li>
+    <% }); %>
+  </ul>
+<% } else { %>
+  <p>No bookings found.</p>
+<% } %>
+
+<%- include('../partials/footer') %>
